@@ -13,7 +13,7 @@ terraform {
 
 resource "google_compute_instance" "example" {
   name = "my-vm"
-  machine_type = "f1-micro"
+  machine_type = "n1-standard-1"
   zone = "us-central1-a"
   boot_disk {
     initialize_params {
