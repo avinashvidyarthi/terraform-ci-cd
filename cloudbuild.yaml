@@ -44,12 +44,12 @@ steps:
   args: 
   - '-c'
   - | 
-      if [ "$BRANCH_NAME" == "dev" ] || [ "$BRANCH_NAME" == "main"]; then
+      if [ "$BRANCH_NAME" == "dev" ] || [ "$BRANCH_NAME" == "main" ]; then
         terraform apply -auto-approve
       else
         echo "***************************** SKIPPING APPLYING *******************************"
         echo "Branch '$BRANCH_NAME' does not represent an official environment."
-        echo "Use puch into 'dev' or 'main' branch to build the infra."
+        echo "Use push into 'dev' or 'main' branch to build the infra."
         echo "*******************************************************************************"
       fi
 # [END tf-apply]      
