@@ -18,6 +18,16 @@ steps:
       terraform init
 
 # [START tf-plan]
+- id: 'tf validate'
+  name: 'hashicorp/terraform:1.0.0'
+  entrypoint: 'sh'
+  args: 
+  - '-c'
+  - | 
+      terraform validate
+# [END tf-plan]
+
+# [START tf-plan]
 - id: 'tf plan'
   name: 'hashicorp/terraform:1.0.0'
   entrypoint: 'sh'
