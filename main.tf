@@ -1,16 +1,17 @@
 provider "google" {
   # credentials = file("./key_editor.json")
-  project = "avinashvidyarthi"
-  region = "us-central1"
+  project = "avinashvidyarthi" #change your project here 
+  region = "us-central1" #change your region here
 }
 
 terraform {
   backend "gcs" {
-    bucket = "do-whatever-you-want-here"
-    prefix = "terraform/"
+    bucket = "do-whatever-you-want-here" #change your GCS bucket here
+    prefix = "terraform/" #change your prefix here
   }
 }
 
+# you can change the configuration accordingly
 resource "google_compute_instance" "example" {
   name = "my-vm"
   machine_type = "f1-micro"
